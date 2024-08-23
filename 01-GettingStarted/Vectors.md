@@ -112,3 +112,5 @@ let deleted_users: Vec<User> = users.drain(..).for_each(|user| println!("Deletin
 ```
 
 Vectors really are a swiss-army knife: they can do almost anything. They are fast, and they are easy to use. They are the most common collection type in Rust.
+
+> [Next](/01-GettingStarted/HashMaps.md)

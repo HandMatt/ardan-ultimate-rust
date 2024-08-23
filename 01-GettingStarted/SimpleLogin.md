@@ -54,3 +54,5 @@ fn main() {
     }
 }
 ```
+
+> [Next](/01-GettingStarted/Enumerations.md)

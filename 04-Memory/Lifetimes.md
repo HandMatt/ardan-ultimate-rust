@@ -198,3 +198,5 @@ The real lesson is: keep pointers for *exactly* as long as you need them, and no
 ## Combine with Rc
 
 You can use `Rc` and `Arc` to avoid most of these problems. The overhead is minimal---and you retain safety. You can count on the reference counter to keep your data alive while it's being referenced.
+
+> [Next](/04-Memory/Traits.md)

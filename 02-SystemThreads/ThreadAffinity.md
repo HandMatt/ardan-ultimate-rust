@@ -35,3 +35,5 @@ fn main() {
     }
 }
 ```
+
+> [Next](/02-SystemThreads/ThreadPriority.md)

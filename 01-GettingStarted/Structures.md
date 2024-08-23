@@ -81,3 +81,4 @@ pub fn login(username: &str, password: &str) -> Option<LoginAction> {
 
 We can test this with the login program, which hasn't changed.
 
+> [Next](/01-GettingStarted/Vectors.md)

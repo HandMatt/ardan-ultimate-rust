@@ -231,3 +231,5 @@ fn main() {
 ```
 
 There's a full range of operators you can overload. You can also overload the `+=`, `/`, `*` operators, and so on. This is very powerful for letting you express functions (rather than remembering to add `x` and `y` each time)---but it can be abused horribly if you decide that `+` should mean "subtract" or something. Don't do that. Please.
+
+> [Next](/04-Memory/Generics.md)

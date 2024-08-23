@@ -113,3 +113,5 @@ fn main() {
 ```
 
 We've created an enum for possible links named `NextNode` just to make it easy to store different linkages. If you don't have a strong `Rc` somewhere, the value will never be saved. Then we use `Rc::downgrade` to create a *weak* pointer for the circular list. Bingo - you can print and all values are dropped.
+
+> [Next](/04-Memory/MemoryFragmentation.md)

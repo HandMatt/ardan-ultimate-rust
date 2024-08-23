@@ -178,3 +178,5 @@ HashMap search took 107 usecs
 So `release` mode massively improves vector performance, and only slightly improves HashMap performance. But the HashMap is still *much* faster for searching.
 
 **Takeaway**: Use `HashMap` when you are searching larger amounts of data, and `Vec` when searching isn't your primary task.
+
+> [Next](/01-GettingStarted/Serialization.md)

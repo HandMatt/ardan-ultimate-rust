@@ -148,3 +148,5 @@ println!("{a:?}");
 Notice that this isn't zero copy. In an ideal world, we'd do a bit of both. Read descriptors, and use those to cast bytes to types.
 
 You may also want to read the file with a buffered reader, a few bytes at a time if you have memory constraints (or a HUGE file).
+
+> [Next](/04-Memory/FFI.md)

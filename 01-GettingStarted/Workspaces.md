@@ -82,3 +82,5 @@ members = [
 And that's it - you have a working workspace with all of its benefits.
 
 > The GitHub version uses one master workspace for *all* the examples. You can open [/Cargo.toml](/Cargo.toml) to see a really large workspace in action!
+
+> [Next](/01-GettingStarted/RustFundamentals.md)

@@ -164,3 +164,5 @@ Atomic: 0.1295855 seconds
 Both versions are faster. The `unsafe` version is *really* fast, and happens to get the correct answer. The `atomic` version is slower, but it's still pretty fast---and it's guaranteed to get the correct answer. If you were doing more calculations, the `release` version with unsafe code would become progressively more inaccurate over time.
 
 The moral of this story: `release` mode can hide bugs. Don't use `unsafe` and pray that your bug is masked. Use `atomic` and be sure that your code is correct.
+
+> [Next](/02-SystemThreads/Mutexes.md)

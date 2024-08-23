@@ -48,3 +48,5 @@ fn main() {
 Notice that any thread can call `park`, and suspend the currently executing thread. In this example, we park 10 threads and let the user choose to wake them up from the keyboard.
 
 This can be very useful if you have a monitor going that detects an event, and wakes up the relevant thread when it detects that the thread is needed. It has the downside that you aren't sending any *data* to the thread. We'll talk about that next.
+
+> [Next](/02-SystemThreads/Channels.md)

@@ -54,3 +54,5 @@ Notice that we've used the `Lazy` pattern we talked about last week: the static 
 We've wrapped the list of names in an `RwLock`. This is like a `Mutex`, but you can either *read* or *write* to it. You can have multiple readers, but only one writer.
 
 Uncontested read is very fast. Pausing for a write is very slightly slower than a `Mutex`, but not by much.
+
+> [Next](/02-SystemThreads/Deadlocks.md)

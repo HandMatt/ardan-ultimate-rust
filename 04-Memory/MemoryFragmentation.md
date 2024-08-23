@@ -124,3 +124,5 @@ fn main() {
 ```
 
 Note that you *can* remove items! Slabs work like a "slot map" - entries are either `Vacant` or filled with your data type. Slabs won't ever fragment, and entries will be stored in contiguous memory. This makes them very fast to iterate over. If you can preallocate a slab of data, it's a great choice for high-performance and not fragmenting memory.
+
+> [Next](/04-Memory/Packing.md)

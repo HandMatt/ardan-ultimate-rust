@@ -79,3 +79,5 @@ fn allocate_memory_with_rust() {
 ```
 
 You have pretty much everything you expect from C: pointer arithmetic, `null` pointers, forgetting to call `dealloc` and leaking memory. At this level, it's quite ugly.
+
+> [Next](/04-Memory/DropTrait.md)

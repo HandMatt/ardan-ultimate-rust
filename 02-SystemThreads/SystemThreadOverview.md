@@ -24,3 +24,5 @@ So the takeaways:
 4. Threads are great when you want to perform calculations in the background and retain interactivity.
 
 When you *do* want thousands of tasks, you often want to use an async/await model. We'll cover that next week.
+
+> [Next](/02-SystemThreads/FirstThread.md)

@@ -284,3 +284,5 @@ fn target_dir() -> PathBuf {
 This is [boilerplate from this guide](https://michael-f-bryan.github.io/rust-ffi-guide/cbindgen.html)
 
 Now run `cargo build` and a `target` directory appears - with a header file.
+
+> [Next](/04-Memory/MemoryLeaks.md)

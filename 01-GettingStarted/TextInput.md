@@ -43,3 +43,5 @@ fn main() {
 ```
 
 Bingo - trimmed text input.
+
+> [Next](/01-GettingStarted/CreateLibrary.md)

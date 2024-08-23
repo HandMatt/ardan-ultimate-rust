@@ -167,3 +167,5 @@ mod tests {
 It's *always* a good idea to test encode and decode together. As you add versions, you'll want to add tests for each version.
 
 Now let's start building our basic, initial data collector.
+
+> [Next](/05-Server/CollectionDaemon1.md)

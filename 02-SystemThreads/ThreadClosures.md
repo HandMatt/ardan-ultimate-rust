@@ -36,3 +36,5 @@ Hello from thread 3!
 ```
 
 In this case, as we talked about last week in [Rust Fundamentals](../01-GettingStarted/RustFundamentals.md) integers are *copyable*. So you don't have to do anything too fancy to share them.
+
+> [Next](/02-SystemThreads/ReturnFromThreads.md)

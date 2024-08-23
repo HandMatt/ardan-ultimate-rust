@@ -73,3 +73,5 @@ pub fn collect_data(tx: Sender<CollectorCommandV1>, collector_id: u128) {
 ```
 
 And now your collector is uniquely identified---and keeps its ID on restart.
+
+> [Next](/05-Server/WebService1.md)

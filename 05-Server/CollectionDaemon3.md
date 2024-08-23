@@ -87,3 +87,5 @@ We're down to 56 bytes! That's a 57% reduction in size. If you're using a provid
 We've added UUID, random number generation and moved to `bincode`. Are we still small? Our binary is 529,408 bytes (517 kb). That's still pretty small. Resource manager tells me that we're up to 11 mb of committed data.
 
 However... leaving it running without the server running shows this gradually ticking upwards as we enqueue more data!
+
+> [Next](/05-Server/BiDirectional.md)

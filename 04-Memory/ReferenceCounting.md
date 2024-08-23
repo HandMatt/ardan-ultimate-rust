@@ -241,3 +241,5 @@ fn main() {
 ```
 
 It's very fast to borrow in this fashion---there's no synchronization at all. But don't try it with threads!
+
+> [Next](/04-Memory/Lifetimes.md)

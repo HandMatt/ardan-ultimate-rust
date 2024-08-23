@@ -139,3 +139,5 @@ There's no error handling yet, but we'll get to that. It's always a good idea to
 * We'll have to build a basic server to receive the data before we can start measuring CPU and RAM usage.
 
 Let's build a very minimal data-collection server.
+
+> [Next](/05-Server/CollectionServer1.md)

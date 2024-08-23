@@ -122,3 +122,5 @@ while let Ok(command) = rx.recv() {
 ```
 
 Run the server and the collector. You should see a steady stream of "ack received". So now you are only enqueueing data when the server *actually* processed it, as well as receiving it.
+
+> [Next](/05-Server/SendingCommands.md)

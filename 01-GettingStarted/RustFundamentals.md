@@ -227,3 +227,4 @@ Notice that we are using `*` to *de-reference* the variable - point back at the 
 
 You can only have one mutable borrow to a variable at a time. This becomes important for global variables and when you start using concurrency. The infamous "borrow checker" strictly enforces this rule to prevent data races.
 
+> [Next](/01-GettingStarted/TextInput.md)

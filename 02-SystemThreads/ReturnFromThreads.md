@@ -45,3 +45,5 @@ Thread returned: 10240
 ```
 
 Notice that each thread is doing its own math, and returning its own value. The `join` function waits for the thread to finish, and returns the value from the thread.
+
+> [Next](/02-SystemThreads/DividingWorkloads.md)

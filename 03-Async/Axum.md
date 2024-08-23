@@ -208,3 +208,5 @@ Let's update the HTML page to perform the POST for us:
 > As you can see, I'm not a JavaScript programmer either!
 
 The same techniques work for all of the HTTP verbs.
+
+> [Next](/03-Async/ThumbnailServer.md)

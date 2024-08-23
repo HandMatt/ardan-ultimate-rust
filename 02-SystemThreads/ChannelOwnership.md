@@ -95,3 +95,5 @@ fn main() {
 ```
 
 On my development box, it averages 17 us per message. That's pretty fast. Definitely enough that if you are doing some serious work, you can afford to move the data.
+
+> [Next](/02-SystemThreads/SendingFunctions.md)

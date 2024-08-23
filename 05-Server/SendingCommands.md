@@ -160,3 +160,5 @@ http://localhost:3000/api/collector/UUID/shutdown
 The collector should show a shutdown command.
 
 Congratulations---you now have a bidirectional widget system. You're still only using 567,296 (554k) of disk space on the collector.
+
+> [Next](/05-Server/CollectionDaemon4.md)

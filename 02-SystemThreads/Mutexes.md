@@ -102,3 +102,5 @@ Smarter Mutex: 0.04 seconds
 It's *really* fast! You're only accessing the mutex once per thread, and doing the calculations in a local variable inside the thread.
 
 There's a lesson here: do as much as you can with local data, and only synchronize when you have data to share. You can't *always* avoid locking the mutex---but if you don't need it, don't use it.
+
+> [Next](/02-SystemThreads/ReadWriteLocks.md)

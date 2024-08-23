@@ -132,3 +132,5 @@ pub fn get_users() -> HashMap<String, User> {
 Equally simple - you load the file, deserialize it with `serde_json::from_str`, and you're done! You can now edit the JSON file, and your changes will be loaded when a user tries to login.
 
 Let's change admin's password to `password2` and test it.
+
+> [Next](/01-GettingStarted/Hashing.md)

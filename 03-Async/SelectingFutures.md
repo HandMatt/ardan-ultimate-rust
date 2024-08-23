@@ -75,3 +75,5 @@ async fn main() {
 ```
 
 Note that if you have a continuous stream in the MPSC channel, the broadcast channel may take a *while* to fire! This pattern is good for sending "quit" messages and other control data---but only if it doesn't have to be instantaneous.
+
+> [Next](/03-Async/Pinning.md)

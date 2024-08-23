@@ -68,3 +68,5 @@ So what's going on here? Let's break it down:
 ### What happens if we don't join the thread?
 
 Run the program a few times. Sometimes the secondary thread finishes, sometimes it doesn't. Threads don't outlive the main program, so if the main program exits before the thread finishes, the thread is killed.
+
+> [Next](/02-SystemThreads/ThreadClosures.md)

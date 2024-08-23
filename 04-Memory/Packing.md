@@ -78,3 +78,5 @@ You can tell Rust to not mangle a name by adding the decoration:
 If you are working with other languages (via the foreign function interface), you may need to use this decoration. Otherwise, the other language will not be able to find your function.
 
 So on the boundaries of your program, where you are dealing with binary data and/or other languages you may need to remember `#[repr(C)])]` and `#[no_mangle]`. You may need `#[repr(packed)]`---but most other languages also pack. Be aware of packing for serialization!
+
+> [Next](/04-Memory/BytesToTypes.md)

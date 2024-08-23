@@ -88,3 +88,5 @@ pub fn login(username: &str, password: &str) -> Option<LoginAction> {
 ```
 
 We've added one line - replacing the `password` with a hashed version. Run the login program now, and it should work.
+
+> [Next](/01-GettingStarted/Cli.md)

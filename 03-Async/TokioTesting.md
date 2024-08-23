@@ -109,3 +109,4 @@ async fn tamed_multi_thread() {
 }
 ```
 
+> [Next](/03-Async/ErrorHandling.md)

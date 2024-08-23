@@ -150,3 +150,5 @@ async fn ticker() {
 Run it now - notice that the ticks run once and then last. `yield_now` moves the task to the back of the queue, so it will run again when it's ready.
 
 `yield_now` is useful if you *must* do something CPU intensive in your async task. If possible, send your big task over to a thread. We'll look at that in a bit.
+
+> [Next](/03-Async/Blocking.md)

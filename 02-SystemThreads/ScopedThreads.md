@@ -42,3 +42,5 @@ This is quite similar to the previous example, but we're using *scoped threads*.
 Because the threads are *guaranteed* to terminate, you can safely borrow data from the parent scope. This is a *lifetime* issue: a normal thread could keep running for a long time, past the time the scope that launched it ends---so borrowing data from that scope would be a bug (and a common cause of crashes and data corruption in other languages). Rust won't let you do that. But since you have the guarantee of lifetime, you can borrow data from the parent scope without having to worry about it.
 
 This pattern is perfect for when you want to fan out a workload to a set of calculation threads, and wait to combine them into an answer.
+
+> [Next](/02-SystemThreads/Atomics.md)

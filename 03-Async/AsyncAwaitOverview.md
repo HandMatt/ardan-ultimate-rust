@@ -37,3 +37,5 @@ NodeJS, Go, C#, Python and others all implement an *opinionated* and *batteries 
 C++ and Rust both took a more agnostic approach. They provide the building blocks, but leave it up to you to assemble them into a framework. This is a good thing, because it means you can build a framework that fits your needs, and not the needs of the language designers. It also allows for competition between frameworks, driving innovation and fitness for purpose.
 
 The downside is that it's a bit more work to get started. But that's what this course is for!
+
+> [Next](/03-Async/HelloAsync.md)

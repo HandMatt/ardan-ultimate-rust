@@ -56,3 +56,5 @@ primes.par_sort_unstable();
 ```
 
 That knocked a few more milliseconds off the time.
+
+> [Next](/02-SystemThreads/RayonScopes.md)

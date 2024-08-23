@@ -512,3 +512,5 @@ Ok(())
 You can do whatever you like with the errors. Logging them is a good idea (you could even replace the `errors.push` with a log call), we'll handle that in `tracing`.
 
 So that was a larger section, but you now have the basics you need to write fallible---it can fail---but reliable code. We'll use these techniques from now on.
+
+> [Next](/03-Async/FileIO.md)

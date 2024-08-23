@@ -152,3 +152,5 @@ info: component 'clippy' for target 'x86_64-pc-windows-msvc' is up to date
 >> Everyone doing ok? If you're stuck, let me know before we move on and we'll see if there's an immediate option to help. Otherwise, I'll try and help you at the first break.
 
 >> **Really stuck?** You can use most of this online at [Replit](https://replit.com/~). It won't be as fast as working locally.
+
+> [Next](/01-GettingStarted/SetupEditor.md)

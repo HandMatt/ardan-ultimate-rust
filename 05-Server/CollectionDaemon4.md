@@ -35,3 +35,5 @@ pub fn collect_data(tx: SyncSender<CollectorCommandV1>, collector_id: u128) {
 ```
 
 Let it run, and inspect the process. Memory usage no longer changes while it runs, even though there's nothing to talk to.
+
+> [Next](/05-Server/SmallerCollector.md)

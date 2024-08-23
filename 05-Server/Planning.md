@@ -43,3 +43,5 @@ Ingestor ---> SqLite
 WebServer[Web Server] <---> SqLite
 WebClient[Web Client] <---> WebServer
 ```
+
+> [Next](/05-Server/SharedDataStructures.md)

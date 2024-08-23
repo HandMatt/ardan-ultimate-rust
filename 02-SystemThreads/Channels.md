@@ -49,3 +49,5 @@ fn main() {
 This is a relatively simple example. We're only sending messages to one thread, and not trying to send anything back. We're also not trying to send anything beyond a simple command. But this is a great pattern---you can extend the `Command` to include lots of operations, and you can send data along with the command. Threads can send to other threads, and you can `clone` the `tx` handle to have as many writers as you want.
 
 We're going to build on the channel system after the break.
+
+> [Next](/02-SystemThreads/ChannelOwnership.md)

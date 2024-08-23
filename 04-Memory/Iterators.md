@@ -235,3 +235,5 @@ impl <'a, K, V> Iterator for HashMapBucketIter<'a, K, V> {
     }
 }
 ```
+
+> [Next](/04-Memory/Cycles.md)

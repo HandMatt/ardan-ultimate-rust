@@ -126,3 +126,5 @@ Looking at Windows` "Resource Monitor", our first version is quite efficient:
 Now if you stop the server, the collector will crash. That's not really the behavior we want, but it's not bad for version 0.1!
 
 Let's revisit the data collector and add some proper error handling.
+
+> [Next](/05-Server/CollectionDaemon2.md)

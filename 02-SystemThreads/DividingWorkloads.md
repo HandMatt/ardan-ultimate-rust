@@ -53,3 +53,5 @@ There's a lot to unpack here, so I've added comments:
 This is a common pattern when working with threads. You'll often need to move data into the thread, rather than passing references.
 
 Moving chunks like this works fine, but if you are using threads to divide up a heavy workload with a single answer --- there's an easier way!
+
+> [Next](/02-SystemThreads/ThreadBuilder.md)

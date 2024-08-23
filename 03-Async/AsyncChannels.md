@@ -185,3 +185,5 @@ async fn main() {
 ```
 
 This example will never terminate! But if you need to send a message to a lot of tasks at once, this is a great way to do it.
+
+> [Next](/03-Async/SharedState.md)

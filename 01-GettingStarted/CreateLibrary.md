@@ -286,3 +286,5 @@ Hello Herbert
 ```
 
 *Congratulations, you've made and used your first library.*
+
+> [Next](/01-GettingStarted/SimpleLogin.md)

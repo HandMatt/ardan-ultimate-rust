@@ -337,3 +337,5 @@ Run the server now, and you can go to an URL like this (copy the UUID from the c
 http://localhost:3000/api/collector/a96331b8-5604-4f45-9217-8e797c5ce9ea
 
 You'll see the data points for that collector.
+
+> [Next](/05-Server/WebServer1.md)

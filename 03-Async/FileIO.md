@@ -176,3 +176,5 @@ The two readers have run concurrently, so you've read War And Peace twice withou
 > In all honesty, I haven't personally managed to read it once yet.
 
 So when you are using `async` code, it's a good idea to use the `async` versions of the operations you are performing. You could also have used `spawn_blocking` to wrap the synchronous code in a thread.
+
+> [Next](/03-Async/BasicNetworkIO.md)

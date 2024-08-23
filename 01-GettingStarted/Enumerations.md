@@ -199,3 +199,5 @@ match login(&username, &password) {
 ```
 
 `match` allows for very deep pattern matching. You usually don't need to nest `match` statements.
+
+> [Next](/01-GettingStarted/Structures.md)

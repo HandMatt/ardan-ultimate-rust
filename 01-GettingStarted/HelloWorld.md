@@ -27,3 +27,5 @@ fn main() {
 This is a very simple program. It has a `main` function---every executable needs one, it tells the OS where to start executing the program. It calls a *macro* --- the exclamation mark tells you that its a macro --- called `println`, which prints some text with a newline at the end.
 
 Run the program with `cargo run`, and it predictably prints "Hello, world!". Congratulations! You've written your first Rust program.
+
+> [Next](/01-GettingStarted/Workspaces.md)

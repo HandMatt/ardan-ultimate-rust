@@ -15,3 +15,4 @@ Other than that, you haven't had to add lifetime annotations, use `unsafe` code,
 
 "Idiomatic" Rust is very powerful and can go as low-level as C (you can even inline assembly!)---typically with safety guarantees on top. But it's also very high-level, and you can write code that is almost as high-level as Python or Ruby. "Normal" programming---building a web server, a command-line tool, a GUI app, a game, etc.---doesn't require you to do any memory management at all. The underlying systems libraries are taking care of it.
 
+> [Next](/04-Memory/Unsafe.md)

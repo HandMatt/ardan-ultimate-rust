@@ -47,3 +47,5 @@ Today, we're going to take a quick march through the basics of Rust.
 * Serialization/Deserialization
 * Hashing Passwords
 * Build a full command line application with CLAP
+
+> [Next](/01-GettingStarted/SetupRust.md)

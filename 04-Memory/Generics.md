@@ -191,4 +191,6 @@ In both cases:
 
 There's even code that handles `<T1>`, `<T1, T2>` and other lists of parameters (up to 16) with separate implementations to handle whatever you may have put in there!
 
-It's beyond the scope of a foundations class to really dig into how that works---but you have the fundamentals. 
+It's beyond the scope of a foundations class to really dig into how that works---but you have the fundamentals.
+
+> [Next](/04-Memory/Iterators.md)

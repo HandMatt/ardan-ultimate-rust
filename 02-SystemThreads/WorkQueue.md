@@ -165,4 +165,4 @@ fn main() {
 }
 ```
 
-
+> [Next](/02-SystemThreads/ThreadAffinity.md)

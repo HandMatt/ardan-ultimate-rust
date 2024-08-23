@@ -55,3 +55,5 @@ Today, we're going to build on last week's introduction to Rust and focus on a d
 * Making it easy with `Rayon`
 
 We'll end with a QA, some pointers to crates that can help you, and pointers towards next week.
+
+> [Next](/02-SystemThreads/SystemThreadOverview.md)

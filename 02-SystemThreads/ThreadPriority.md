@@ -68,3 +68,6 @@ The differences are very small. They become a little more pronounced when you do
 ## Combining CPU Priority With Affinity
 
 In my experience, this is most useful when combined with affinity. A high priority thread on a core (not core 0!) is likely to keep that core mostly to itself.
+
+
+> [Next](/02-SystemThreads/Rayon.md)

@@ -154,3 +154,5 @@ let recovered_data = lock.unwrap_or_else(|poisoned| {
 });
 println!("Recovered data: {recovered_data:?}");
 ```
+
+> [Next](/02-SystemThreads/LockFree.md)

@@ -302,3 +302,5 @@ And voila---we have a decent looking data collector:
 ![](../images/CollectedData.jpg)
 
 Many projects would say "good enough, ship it!"... (hopefully after adding some authentication, anyway)
+
+> [Next](/05-Server/CollectionDaemon3.md)

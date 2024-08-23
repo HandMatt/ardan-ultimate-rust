@@ -191,3 +191,5 @@ And now we're using a single TCP connection during the lifetime of the sender. T
 > Why not keep a single TCP connection for the whole time? The server can only handle 64k connections on a single IP. Keeping a long-running connection per client will require more IP addresses if the widget is successful. You could also look at using UDP for submission. The downside of UDP is that you can lose the ability to reply (thanks to NAT).
 
 There are still imperfections on the client-side, but let's start putting together the web service.
+
+> [Next](/05-Server/CollectorId.md)

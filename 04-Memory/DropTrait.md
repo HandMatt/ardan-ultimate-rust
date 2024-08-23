@@ -256,3 +256,5 @@ The RAII/`Drop` pattern is used for `File`, `mpsc` channels, `TCPStream` and oth
 With RAII, you get a "single ownership" model. The object that owns the resource is the only one that can clean it up. This is a *huge* improvement over C, where you can have multiple pointers to the same resource, and you have to be careful to clean up after yourself. It does limit you to moving the resource around---but that's why Rust is move-by-default. In some cases, it simply doesn't make sense to have multiple owners of a resource.
 
 In other cases, you can use [Reference Counting](./ReferenceCounting.md)...
+
+> [Next](/04-Memory/ReferenceCounting.md)

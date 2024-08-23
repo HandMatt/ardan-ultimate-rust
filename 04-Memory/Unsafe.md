@@ -75,3 +75,5 @@ This is a good thing. It forces you to think about what you are doing, and docum
 I go out of my way to avoid using `unsafe`. If there's a well-respected library that can do it for me, I'll use it. If I have to use `unsafe`, I document and test it very heavily---and try to offer users a safe path to use the code. Please don't be cavalier about it and use `unsafe` everywhere in the name of saving a few nanoseconds of performance. Benchmark, test, and optimize *when you need to*.
 
 > Premature Optimization is the Root of Most Security Vulnerabilities!
+
+> [Next](/04-Memory/MemoryAllocFree.md)
