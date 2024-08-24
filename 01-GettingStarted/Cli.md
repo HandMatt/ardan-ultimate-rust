@@ -277,7 +277,7 @@ enum Commands {
 }
 ```
 
-As expected, `--help and `cargo run -- delete --help` have been updated.
+As expected, `--help` and `cargo run -- delete --help` have been updated.
 
 Now let's implement the deletion:
 
