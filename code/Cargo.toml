@@ -8,23 +8,23 @@ edition = "2021"
 [workspace]
 members = [
     # Week 1 - Foundations
-    "01_foundation/hello_world",       # Annotated "Hello World!" program
-    "01_foundation/vars_mut_shadow",   # Examples of variable, mutability and shadowing
-    "01_foundation/function_returns",  # Examples of functions, moving and borrowing 
+    "01_foundation/hello_world",        # Annotated "Hello World!" program
+    "01_foundation/vars_mut_shadow",    # Examples of variable, mutability and shadowing
+    "01_foundation/function_returns",   # Examples of functions, moving and borrowing 
     "01_foundation/borrow_reference",
-    "01_foundation/text_input",        # Basic text input program
+    "01_foundation/text_input",         # Basic text input program
     "01_foundation/auth",
     "01_foundation/login",
-    "01_foundation/auth_enum",         # User auth library making use of enums
-    "01_foundation/login_enum",        # Integration of `auth_enum`
-    "01_foundation/auth_enum_data",    # User auth library making use of enums holding data
-    "01_foundation/login_enum_data",   # Integration of `auth_enum_data`
-    "01_foundation/auth_enum_option",  # User auth library making use of enums containing options
-    "01_foundation/login_enum_option", # Integration of `auth_enum_option`
-    "01_foundation/auth_struct",       # User auth library making use of structs
-    "01_foundation/login_struct",      # Integration of `auth_struct`
-    "01_foundation/auth_vec",          # User auth library making use of vectors
-    "01_foundation/login_vec",         # Integration of `auth_vec`
+    "01_foundation/auth_enum",          # User auth library making use of enums
+    "01_foundation/login_enum",         # Integration of `auth_enum`
+    "01_foundation/auth_enum_data",     # User auth library making use of enums holding data
+    "01_foundation/login_enum_data",    # Integration of `auth_enum_data`
+    "01_foundation/auth_enum_option",   # User auth library making use of enums containing options
+    "01_foundation/login_enum_option",  # Integration of `auth_enum_option`
+    "01_foundation/auth_struct",        # User auth library making use of structs
+    "01_foundation/login_struct",       # Integration of `auth_struct`
+    "01_foundation/auth_vec",           # User auth library making use of vectors
+    "01_foundation/login_vec",          # Integration of `auth_vec`
     "01_foundation/vector_growth",
     "01_foundation/auth_hashmap",
     "01_foundation/login_hashmap",
@@ -138,6 +138,9 @@ members = [
     "05_server/server_v3",
     "05_server/collector_v4",
     "05_server/collector_nouuid",
+
+    "06_bonus/read_file",
+    "06_bonus/file_adapt",
 ]
 
 # Enable this only for the optimization/diet guide
