@@ -141,7 +141,7 @@ members = [
 
     # Week 6 - Bonus
     "06_bonus/read_file",
-    "06_bonus/file_adapt",
+    "06_bonus/file_adapt", "06_bonus/best",
 ]
 
 # Enable this only for the optimization/diet guide
