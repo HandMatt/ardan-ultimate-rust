@@ -1,9 +1,9 @@
+use axum::{routing::get, Extension, Router};
 use std::net::SocketAddr;
-use axum::{Router, routing::get, Extension};
-mod collector;
 mod api;
-mod web;
+mod collector;
 mod commands;
+mod web;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
@@ -23,10 +23,13 @@ async fn main() -> anyhow::Result<()> {
         .route("/collector.html", get(web::collector))
         .route("/api/all", get(api::show_all))
         .route("/api/collectors", get(api::show_collectors))
-        .route("/api/collector/:uuid", get(api::collector_data))        
-        .route("/api/collector/:uuid/shutdown", get(api::shutdown_collector))
+        .route("/api/collector/:uuid", get(api::collector_data))
+        .route(
+            "/api/collector/:uuid/shutdown",
+            get(api::shutdown_collector),
+        )
         .layer(Extension(pool));
-    let addr = SocketAddr::from(([127, 0, 0, 1], 3000));    
+    let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
     axum::Server::bind(&addr)
         .serve(app.into_make_service())
         .await

@@ -1,6 +1,9 @@
 use crate::errors::CollectorError;
-use shared_v3::{DATA_COLLECTOR_ADDRESS, decode_response_v1, CollectorResponseV1};
-use std::{io::{Write, Read}, collections::VecDeque};
+use shared_v3::{decode_response_v1, CollectorResponseV1, DATA_COLLECTOR_ADDRESS};
+use std::{
+    collections::VecDeque,
+    io::{Read, Write},
+};
 
 /*pub fn send_command(bytes: &[u8]) -> Result<(), CollectorError> {
     let mut stream = std::net::TcpStream::connect(DATA_COLLECTOR_ADDRESS)
@@ -24,7 +27,9 @@ pub fn send_queue(queue: &mut VecDeque<Vec<u8>>, collector_id: u128) -> Result<(
             queue.push_front(command);
             return Err(CollectorError::UnableToSendData);
         }
-        let bytes_read = stream.read(&mut buf).map_err(|_| CollectorError::UnableToReceiveData)?;
+        let bytes_read = stream
+            .read(&mut buf)
+            .map_err(|_| CollectorError::UnableToReceiveData)?;
         if bytes_read == 0 {
             queue.push_front(command);
             return Err(CollectorError::UnableToReceiveData);
@@ -43,7 +48,9 @@ pub fn send_queue(queue: &mut VecDeque<Vec<u8>>, collector_id: u128) -> Result<(
     if stream.write_all(&bytes).is_err() {
         return Err(CollectorError::UnableToSendData);
     }
-    let bytes_read = stream.read(&mut buf).map_err(|_| CollectorError::UnableToReceiveData)?;
+    let bytes_read = stream
+        .read(&mut buf)
+        .map_err(|_| CollectorError::UnableToReceiveData)?;
     if bytes_read == 0 {
         return Err(CollectorError::UnableToReceiveData);
     }

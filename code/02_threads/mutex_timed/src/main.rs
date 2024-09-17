@@ -1,4 +1,7 @@
-use std::{sync::{atomic::AtomicU32, Mutex}, time::Instant};
+use std::{
+    sync::{atomic::AtomicU32, Mutex},
+    time::Instant,
+};
 
 static ATOMIC_COUNTER: AtomicU32 = AtomicU32::new(0);
 static mut UNSAFE_COUNTER: u32 = 0;
@@ -37,7 +40,10 @@ fn safely_atomic() {
         handles.push(handle);
     }
     handles.into_iter().for_each(|h| h.join().unwrap());
-    println!("Atomic                   : {}", ATOMIC_COUNTER.load(std::sync::atomic::Ordering::Relaxed));
+    println!(
+        "Atomic                   : {}",
+        ATOMIC_COUNTER.load(std::sync::atomic::Ordering::Relaxed)
+    );
 }
 
 fn mutex_locked() {
@@ -51,7 +57,10 @@ fn mutex_locked() {
         handles.push(handle);
     }
     handles.into_iter().for_each(|h| h.join().unwrap());
-    println!("Mutex                    : {}", *MUTEX_COUNTER.lock().unwrap());
+    println!(
+        "Mutex                    : {}",
+        *MUTEX_COUNTER.lock().unwrap()
+    );
 }
 
 fn smarter_mutex_locked() {
@@ -67,7 +76,10 @@ fn smarter_mutex_locked() {
         handles.push(handle);
     }
     handles.into_iter().for_each(|h| h.join().unwrap());
-    println!("Smarter Mutex            : {}", *MUTEX_COUNTER2.lock().unwrap());
+    println!(
+        "Smarter Mutex            : {}",
+        *MUTEX_COUNTER2.lock().unwrap()
+    );
 }
 
 fn main() {
@@ -92,5 +104,8 @@ fn main() {
     println!("Unsafe:        {:.2} seconds", unsafe_elapsed.as_secs_f32());
     println!("Atomic:        {:.2} seconds", atomic_elapsed.as_secs_f32());
     println!("Mutex:         {:.2} seconds", mutex_elapsed.as_secs_f32());
-    println!("Smarter Mutex: {:.2} seconds", smarter_mutex_elapsed.as_secs_f32());
+    println!(
+        "Smarter Mutex: {:.2} seconds",
+        smarter_mutex_elapsed.as_secs_f32()
+    );
 }

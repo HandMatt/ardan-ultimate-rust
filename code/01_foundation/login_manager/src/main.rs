@@ -95,9 +95,10 @@ fn main() {
             admin,
         }) => add_user(username, password, admin.is_some()),
         Some(Commands::Delete { username }) => delete_user(&username),
-        Some(Commands::ChangePassword { username, new_password }) => {
-            change_password(&username, &new_password)
-        }
+        Some(Commands::ChangePassword {
+            username,
+            new_password,
+        }) => change_password(&username, &new_password),
         None => {
             println!("Run with --help to see instructions");
             std::process::exit(0);

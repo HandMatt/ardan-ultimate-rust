@@ -1,6 +1,6 @@
-use bumpalo::Bump;
 use bumpalo::collections::String;
 use bumpalo::collections::Vec;
+use bumpalo::Bump;
 
 struct MyData {
     a: i32,

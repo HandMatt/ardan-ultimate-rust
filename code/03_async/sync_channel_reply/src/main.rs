@@ -1,4 +1,4 @@
-use std::{time::Duration, sync::mpsc};
+use std::{sync::mpsc, time::Duration};
 
 enum Command {
     Print(String),
@@ -22,7 +22,7 @@ async fn main() {
                     handle.spawn(async move {
                         tx_reply.send(s).await.unwrap();
                     });
-                },
+                }
             }
         }
     });

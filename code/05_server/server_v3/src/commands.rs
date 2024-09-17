@@ -1,7 +1,7 @@
 use once_cell::sync::Lazy;
 use shared_v3::TaskType;
-use std::sync::Mutex;
 use std::collections::HashMap;
+use std::sync::Mutex;
 
 static COMMANDS: Lazy<Mutex<HashMap<u128, TaskType>>> = Lazy::new(|| Mutex::new(HashMap::new()));
 

@@ -3,7 +3,7 @@ fn fibonacci(n: u32) -> u32 {
     match n {
         0 => 0,
         1 => 1,
-        _ => fibonacci(n-1) + fibonacci(n-2)
+        _ => fibonacci(n - 1) + fibonacci(n - 2),
     }
 }
 
@@ -16,7 +16,8 @@ fn async_fibonacci(n: u64) -> BoxFuture<'static, u64> {
             1 => 1,
             _ => async_fibonacci(n - 1).await + async_fibonacci(n - 2).await,
         }
-    }.boxed()
+    }
+    .boxed()
 }
 
 use async_recursion::async_recursion;

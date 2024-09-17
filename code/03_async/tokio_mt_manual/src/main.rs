@@ -14,9 +14,9 @@ fn thread_namer() -> String {
 fn main() {
     let rt = runtime::Builder::new_multi_thread()
         // YOU DON'T HAVE TO SPECIFY ANY OF THESE
-        .worker_threads(4)  // 4 threads in the pool
-        .thread_name_fn(thread_namer) // Name the threads. 
-                                     // This helper names them "my-pool-#" for debugging assistance.
+        .worker_threads(4) // 4 threads in the pool
+        .thread_name_fn(thread_namer) // Name the threads.
+        // This helper names them "my-pool-#" for debugging assistance.
         .thread_stack_size(3 * 1024 * 1024) // You can set the stack size
         .event_interval(61) // You can increase the I/O polling frequency
         .global_queue_interval(61) // You can change how often the global work thread is checked

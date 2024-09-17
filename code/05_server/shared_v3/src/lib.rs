@@ -28,7 +28,7 @@ pub enum CollectorCommandV1 {
 pub enum CollectorResponseV1 {
     Ack,
     NoWork,
-    Task(TaskType)
+    Task(TaskType),
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone, PartialEq)]

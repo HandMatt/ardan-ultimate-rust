@@ -1,7 +1,10 @@
-use axum::{routing::{get, post}, Router};
+use axum::response::Html;
+use axum::{
+    routing::{get, post},
+    Router,
+};
 use serde::Serialize;
 use std::{net::SocketAddr, path::Path};
-use axum::response::Html;
 
 #[tokio::main]
 async fn main() {
@@ -9,7 +12,7 @@ async fn main() {
         .route("/", get(say_hello_file))
         .route("/json", get(say_hello_json))
         .route("/post", post(say_hello_post));
-    let addr = SocketAddr::from(([127, 0, 0, 1], 3000));    
+    let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
     axum::Server::bind(&addr)
         .serve(app.into_make_service())
         .await

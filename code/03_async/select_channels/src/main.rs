@@ -1,4 +1,4 @@
-use tokio::sync::{mpsc, broadcast};
+use tokio::sync::{broadcast, mpsc};
 
 async fn receiver(mut rx: mpsc::Receiver<u32>, mut broadcast_rx: broadcast::Receiver<u32>) {
     loop {
@@ -16,7 +16,7 @@ async fn main() {
 
     tokio::spawn(receiver(rx, broadcast_rx));
 
-   for count in 0 .. 10 {
+    for count in 0..10 {
         if count % 2 == 0 {
             tx.send(count).await.unwrap();
         } else {

@@ -30,11 +30,9 @@ fn main() {
     move_me(my_shared.clone());
 
     let mut threads = Vec::new();
-    for _ in 0.. 10 {
+    for _ in 0..10 {
         let my_shared = my_shared.clone();
-        threads.push(std::thread::spawn(move || {
-            move_me(my_shared)
-        }));
+        threads.push(std::thread::spawn(move || move_me(my_shared)));
     }
     for t in threads {
         t.join().unwrap();

@@ -25,6 +25,12 @@ fn main() {
 
     std::thread::sleep(Duration::from_secs(10));
 
-    println!("Low    : {:>10}", LOW_COUNT.load(std::sync::atomic::Ordering::Relaxed));
-    println!("Medium : {:>10}", MEDIUM_COUNT.load(std::sync::atomic::Ordering::Relaxed));
+    println!(
+        "Low    : {:>10}",
+        LOW_COUNT.load(std::sync::atomic::Ordering::Relaxed)
+    );
+    println!(
+        "Medium : {:>10}",
+        MEDIUM_COUNT.load(std::sync::atomic::Ordering::Relaxed)
+    );
 }

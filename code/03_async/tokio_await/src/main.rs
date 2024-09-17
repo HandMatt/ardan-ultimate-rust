@@ -36,9 +36,6 @@ async fn ticker() {
 //#[tokio:main]
 #[tokio::main(flavor = "current_thread")]
 async fn main() {
-    let _ = tokio::join!(
-        tokio::spawn(hello()), 
-        tokio::spawn(ticker()),
-    );
+    let _ = tokio::join!(tokio::spawn(hello()), tokio::spawn(ticker()),);
     println!("Finished");
 }

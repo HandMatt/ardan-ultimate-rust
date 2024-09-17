@@ -1,6 +1,6 @@
 use crate::errors::CollectorError;
 use shared_v3::DATA_COLLECTOR_ADDRESS;
-use std::{io::Write, collections::VecDeque};
+use std::{collections::VecDeque, io::Write};
 
 /*pub fn send_command(bytes: &[u8]) -> Result<(), CollectorError> {
     let mut stream = std::net::TcpStream::connect(DATA_COLLECTOR_ADDRESS)

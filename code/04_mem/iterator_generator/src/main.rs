@@ -2,13 +2,13 @@ struct Counter<const MAX: u32> {
     count: u32,
 }
 
-impl <const MAX:u32> Counter<MAX> {
+impl<const MAX: u32> Counter<MAX> {
     fn new() -> Self {
         Self { count: 0 }
     }
 }
 
-impl <const MAX:u32> Iterator for Counter<MAX> {
+impl<const MAX: u32> Iterator for Counter<MAX> {
     type Item = u32;
     fn next(&mut self) -> Option<Self::Item> {
         if self.count < MAX {
@@ -21,7 +21,7 @@ impl <const MAX:u32> Iterator for Counter<MAX> {
     }
 }
 
-impl <const MAX:u32> ExactSizeIterator for Counter<MAX> {
+impl<const MAX: u32> ExactSizeIterator for Counter<MAX> {
     fn len(&self) -> usize {
         MAX as usize
     }

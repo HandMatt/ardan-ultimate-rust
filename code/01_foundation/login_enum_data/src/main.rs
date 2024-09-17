@@ -1,4 +1,4 @@
-use auth_enum_data::{login, LoginAction, LoginRole, read_line};
+use auth_enum_data::{login, read_line, LoginAction, LoginRole};
 
 fn main() {
     let mut tries = 0;

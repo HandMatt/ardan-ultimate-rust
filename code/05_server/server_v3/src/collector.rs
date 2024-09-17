@@ -1,8 +1,13 @@
-use std::net::SocketAddr;
-use shared_v3::{DATA_COLLECTOR_ADDRESS, decode_v1, CollectorCommandV1, encode_response_v1, CollectorResponseV1};
-use sqlx::{Pool, Sqlite};
-use tokio::{net::{TcpListener, TcpStream}, io::{AsyncReadExt, AsyncWriteExt}};
 use crate::commands::get_commands;
+use shared_v3::{
+    decode_v1, encode_response_v1, CollectorCommandV1, CollectorResponseV1, DATA_COLLECTOR_ADDRESS,
+};
+use sqlx::{Pool, Sqlite};
+use std::net::SocketAddr;
+use tokio::{
+    io::{AsyncReadExt, AsyncWriteExt},
+    net::{TcpListener, TcpStream},
+};
 
 pub async fn data_collector(cnn: Pool<Sqlite>) -> anyhow::Result<()> {
     // Listen for TCP connections on the data collector address
@@ -44,7 +49,15 @@ async fn new_connection(mut socket: TcpStream, address: SocketAddr, cnn: Pool<Sq
                     socket.write_all(&bytes).await.unwrap();
                 }
             }
-            (timestamp, CollectorCommandV1::SubmitData { collector_id, total_memory, used_memory, average_cpu_usage }) => {
+            (
+                timestamp,
+                CollectorCommandV1::SubmitData {
+                    collector_id,
+                    total_memory,
+                    used_memory,
+                    average_cpu_usage,
+                },
+            ) => {
                 let collector_id = uuid::Uuid::from_u128(collector_id);
                 let collector_id = collector_id.to_string();
 
@@ -65,6 +78,6 @@ async fn new_connection(mut socket: TcpStream, address: SocketAddr, cnn: Pool<Sq
                     socket.write_all(&bytes).await.unwrap();
                 }
             }
-        }        
+        }
     }
 }

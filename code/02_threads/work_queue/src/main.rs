@@ -1,5 +1,5 @@
-use std::{sync::Mutex, collections::VecDeque, time::Duration};
 use once_cell::sync::Lazy;
+use std::{collections::VecDeque, sync::Mutex, time::Duration};
 
 static WORK_QUEUE: Lazy<Mutex<VecDeque<String>>> = Lazy::new(|| Mutex::new(VecDeque::new()));
 
@@ -9,7 +9,6 @@ fn main() {
     let cpu_count = 2;
     let mut threads = Vec::with_capacity(cpu_count);
     let mut broadcast = Vec::with_capacity(cpu_count);
-
 
     for cpu in 0..cpu_count {
         let (tx, rx) = std::sync::mpsc::channel::<()>();
@@ -27,7 +26,6 @@ fn main() {
                     println!("CPU {cpu} found no work");
                 }
             }
-
         });
         threads.push(thread);
     }

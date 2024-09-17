@@ -60,8 +60,14 @@ mod test {
 
     #[test]
     fn test_login() {
-        assert_eq!(login("admin", "password"), Some(LoginAction::Granted(LoginRole::Admin)));
-        assert_eq!(login("bob", "password"), Some(LoginAction::Granted(LoginRole::User)));
+        assert_eq!(
+            login("admin", "password"),
+            Some(LoginAction::Granted(LoginRole::Admin))
+        );
+        assert_eq!(
+            login("bob", "password"),
+            Some(LoginAction::Granted(LoginRole::User))
+        );
         assert_eq!(login("bob", "wrong"), Some(LoginAction::Denied));
     }
 }

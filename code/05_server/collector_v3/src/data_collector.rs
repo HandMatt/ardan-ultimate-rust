@@ -1,6 +1,6 @@
 use shared_v3::CollectorCommandV1;
-use sysinfo::{SystemExt, CpuExt};
-use std::{time::Instant, sync::mpsc::Sender};
+use std::{sync::mpsc::Sender, time::Instant};
+use sysinfo::{CpuExt, SystemExt};
 
 pub fn collect_data(tx: Sender<CollectorCommandV1>, collector_id: u128) {
     let mut sys = sysinfo::System::new_all();

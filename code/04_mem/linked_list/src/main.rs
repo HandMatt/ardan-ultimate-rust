@@ -1,9 +1,9 @@
-use std::{rc::Rc, cell::RefCell};
+use std::{cell::RefCell, rc::Rc};
 
 #[derive(Debug)]
 struct Node {
     value: i32,
-    next: RefCell<Option<Rc<Node>>>
+    next: RefCell<Option<Rc<Node>>>,
 }
 
 impl Drop for Node {

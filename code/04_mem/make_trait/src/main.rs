@@ -1,5 +1,5 @@
-use std::{fmt::Debug, rc::Rc};
 use std::any::Any;
+use std::{fmt::Debug, rc::Rc};
 
 trait Animal {
     fn speak(&self);
@@ -22,7 +22,7 @@ fn get_animal() -> impl Animal {
     Cat
 }
 
-trait DebuggableClonableAnimal: Animal+Debug+Clone {}
+trait DebuggableClonableAnimal: Animal + Debug + Clone {}
 
 #[derive(Debug, Clone)]
 struct Dog;
@@ -41,7 +41,7 @@ fn clone_and_speak(animal: &impl DebuggableClonableAnimal) {
     println!("{cloned_animal:?}");
 }
 
-trait DowncastableAnimal: Animal+Any {
+trait DowncastableAnimal: Animal + Any {
     fn as_any(&self) -> &dyn Any;
 }
 
@@ -72,7 +72,7 @@ fn main() {
     let (tx, rx) = std::sync::mpsc::channel::<Box<dyn Animal>>();
     let (tx, rx) = std::sync::mpsc::channel::<Rc<dyn Animal>>();
 
-    let more_animals : Vec<Box<dyn DowncastableAnimal>> = vec![Box::new(Tortoise)];
+    let more_animals: Vec<Box<dyn DowncastableAnimal>> = vec![Box::new(Tortoise)];
     for animal in more_animals.iter() {
         if let Some(cat) = animal.as_any().downcast_ref::<Tortoise>() {
             println!("We have access to the tortoise");

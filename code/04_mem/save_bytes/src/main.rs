@@ -14,7 +14,7 @@ fn main() {
         OurData {
             number: 2,
             tag: *b"world   ",
-        }
+        },
     ];
 
     let bytes: &[u8] = bytemuck::cast_slice(&some_data);

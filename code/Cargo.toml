@@ -139,6 +139,7 @@ members = [
     "05_server/collector_v4",
     "05_server/collector_nouuid",
 
+    # Week 6 - Bonus
     "06_bonus/read_file",
     "06_bonus/file_adapt",
 ]

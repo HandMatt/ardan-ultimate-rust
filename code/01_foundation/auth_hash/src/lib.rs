@@ -1,5 +1,5 @@
+use serde::{Deserialize, Serialize};
 use std::{collections::HashMap, path::Path};
-use serde::{Serialize, Deserialize};
 
 pub fn read_line() -> String {
     // <- Public function
@@ -48,8 +48,14 @@ impl User {
 
 fn get_default_users() -> HashMap<String, User> {
     let mut users = HashMap::new();
-    users.insert("admin".to_string(), User::new("admin", "password", LoginRole::Admin));
-    users.insert("bob".to_string(), User::new("bob", "password", LoginRole::User));
+    users.insert(
+        "admin".to_string(),
+        User::new("admin", "password", LoginRole::Admin),
+    );
+    users.insert(
+        "bob".to_string(),
+        User::new("bob", "password", LoginRole::User),
+    );
     users
 }
 
@@ -90,8 +96,14 @@ mod test {
 
     #[test]
     fn test_login() {
-        assert_eq!(login("admin", "password"), Some(LoginAction::Granted(LoginRole::Admin)));
-        assert_eq!(login("bob", "password"), Some(LoginAction::Granted(LoginRole::User)));
+        assert_eq!(
+            login("admin", "password"),
+            Some(LoginAction::Granted(LoginRole::Admin))
+        );
+        assert_eq!(
+            login("bob", "password"),
+            Some(LoginAction::Granted(LoginRole::User))
+        );
         assert_eq!(login("bob", "wrong"), Some(LoginAction::Denied));
     }
 }

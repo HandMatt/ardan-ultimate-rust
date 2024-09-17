@@ -1,16 +1,16 @@
 use std::collections::HashMap;
 
-struct HashMapBucket<K,V>
-{
-    map: HashMap<K, Vec<V>>
+struct HashMapBucket<K, V> {
+    map: HashMap<K, Vec<V>>,
 }
 
-impl <K,V> HashMapBucket<K,V> 
-where K: Eq + std::hash::Hash
+impl<K, V> HashMapBucket<K, V>
+where
+    K: Eq + std::hash::Hash,
 {
     fn new() -> Self {
         HashMapBucket {
-            map: HashMap::new()
+            map: HashMap::new(),
         }
     }
 
@@ -20,7 +20,7 @@ where K: Eq + std::hash::Hash
     }
 }
 
-impl <K,V> HashMapBucket<K, V> {
+impl<K, V> HashMapBucket<K, V> {
     fn iter(&self) -> HashMapBucketIter<K, V> {
         let mut key_iter = self.map.iter();
         let current_map_entry = key_iter.next();
@@ -38,7 +38,7 @@ struct HashMapBucketIter<'a, K, V> {
     current_vec_index: usize,
 }
 
-impl <'a, K, V> Iterator for HashMapBucketIter<'a, K, V> {
+impl<'a, K, V> Iterator for HashMapBucketIter<'a, K, V> {
     type Item = (&'a K, &'a V);
 
     fn next(&mut self) -> Option<Self::Item> {

@@ -1,5 +1,5 @@
-use std::io::Write;
 use shared_v1::{CollectorCommandV1, DATA_COLLECTOR_ADDRESS};
+use std::io::Write;
 
 pub fn send_command(command: CollectorCommandV1) {
     let bytes = shared_v1::encode_v1(command);

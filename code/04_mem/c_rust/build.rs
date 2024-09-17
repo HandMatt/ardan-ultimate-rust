@@ -1,9 +1,7 @@
-use std::{path::PathBuf, env};
+use std::{env, path::PathBuf};
 
 fn main() {
-    cc::Build::new()
-        .file("src/crust.c")
-        .compile("crust");
+    cc::Build::new().file("src/crust.c").compile("crust");
 
     let bindings = bindgen::Builder::default()
         .header("src/crust.h")

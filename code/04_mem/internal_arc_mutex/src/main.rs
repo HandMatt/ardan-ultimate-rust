@@ -1,6 +1,6 @@
 use std::sync::{Arc, Mutex};
 
-struct SharedData{
+struct SharedData {
     data: Mutex<String>,
 }
 

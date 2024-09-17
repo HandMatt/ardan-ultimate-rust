@@ -1,4 +1,4 @@
-use auth::{read_line, login_simple};
+use auth::{login_simple, read_line};
 
 fn main() {
     let mut tries = 0;

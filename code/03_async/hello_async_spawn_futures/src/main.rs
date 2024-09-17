@@ -1,6 +1,6 @@
 use futures::executor::block_on;
-use futures::join;
 use futures::future::join_all;
+use futures::join;
 
 async fn do_work() {
     // Start two tasks at once

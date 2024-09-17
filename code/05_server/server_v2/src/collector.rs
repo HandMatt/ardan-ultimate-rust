@@ -1,7 +1,10 @@
-use std::net::SocketAddr;
-use shared_v3::{DATA_COLLECTOR_ADDRESS, decode_v1, CollectorCommandV1};
+use shared_v3::{decode_v1, CollectorCommandV1, DATA_COLLECTOR_ADDRESS};
 use sqlx::{Pool, Sqlite};
-use tokio::{net::{TcpListener, TcpStream}, io::AsyncReadExt};
+use std::net::SocketAddr;
+use tokio::{
+    io::AsyncReadExt,
+    net::{TcpListener, TcpStream},
+};
 
 pub async fn data_collector(cnn: Pool<Sqlite>) -> anyhow::Result<()> {
     // Listen for TCP connections on the data collector address
@@ -32,7 +35,15 @@ async fn new_connection(mut socket: TcpStream, address: SocketAddr, cnn: Pool<Sq
         let received_data = decode_v1(&buf[0..n]);
 
         match received_data {
-            (timestamp, CollectorCommandV1::SubmitData { collector_id, total_memory, used_memory, average_cpu_usage }) => {
+            (
+                timestamp,
+                CollectorCommandV1::SubmitData {
+                    collector_id,
+                    total_memory,
+                    used_memory,
+                    average_cpu_usage,
+                },
+            ) => {
                 let collector_id = uuid::Uuid::from_u128(collector_id);
                 let collector_id = collector_id.to_string();
 
@@ -50,6 +61,6 @@ async fn new_connection(mut socket: TcpStream, address: SocketAddr, cnn: Pool<Sq
                 }
             }
             _ => {} // Do nothing
-        }        
+        }
     }
 }

@@ -1,7 +1,7 @@
 // use std::fs::read_to_string;
 
 // fn main() {
-//     // Herbert's benchmarking shows that: 
+//     // Herbert's benchmarking shows that:
 //     // 1GB file read in 2,311ms
 //     let now = std::time::Instant::now();
 //     let war_and_peace = read_to_string("../../03_async/buffered_reader/warandpeace.txt").unwrap();

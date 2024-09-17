@@ -1,13 +1,13 @@
 use std::{cell::RefCell, sync::Arc};
 
 struct MyData {
-    data: RefCell<String>
+    data: RefCell<String>,
 }
 
 impl MyData {
     fn new() -> Self {
         Self {
-            data: RefCell::new("Hello".to_string())
+            data: RefCell::new("Hello".to_string()),
         }
     }
 }

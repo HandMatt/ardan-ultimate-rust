@@ -5,7 +5,7 @@ fn main() {
     let mut thread_handles = Vec::new();
     let chunks = to_add.chunks(N_THREADS);
 
-    // Notice that each chunk is a *slice* - a reference - to part of the array.    
+    // Notice that each chunk is a *slice* - a reference - to part of the array.
     for chunk in chunks {
         // So we *move* the chunk into its own vector, taking ownership and
         // passing that ownership to the thread. This adds a `memcpy` call

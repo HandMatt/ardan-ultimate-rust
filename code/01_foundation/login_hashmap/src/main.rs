@@ -1,4 +1,4 @@
-use auth_hashmap::{login, LoginAction, LoginRole, read_line};
+use auth_hashmap::{login, read_line, LoginAction, LoginRole};
 
 fn main() {
     let mut tries = 0;
@@ -14,7 +14,7 @@ fn main() {
             }
             Some(LoginAction::Granted(LoginRole::User)) => {
                 println!("Welcome {username}, you are a regular user.");
-                break
+                break;
             }
             Some(LoginAction::Denied) => {
                 println!("Login failed.");

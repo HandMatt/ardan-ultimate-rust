@@ -1,8 +1,8 @@
-use std::collections::VecDeque;
 use shared_v3::CollectorCommandV1;
+use std::collections::VecDeque;
 mod data_collector;
-mod sender;
 mod errors;
+mod sender;
 
 fn get_uuid() -> u128 {
     let path = std::path::Path::new("uuid");

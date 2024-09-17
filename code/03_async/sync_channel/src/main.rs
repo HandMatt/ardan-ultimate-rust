@@ -1,4 +1,4 @@
-use std::{time::Duration, sync::mpsc};
+use std::{sync::mpsc, time::Duration};
 
 enum Command {
     Print(String),

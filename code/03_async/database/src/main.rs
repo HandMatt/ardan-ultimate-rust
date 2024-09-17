@@ -1,4 +1,4 @@
-use sqlx::{Row, FromRow};
+use sqlx::{FromRow, Row};
 
 #[derive(Debug, FromRow)]
 struct Message {
@@ -28,24 +28,22 @@ async fn main() -> anyhow::Result<()> {
     let pool = sqlx::SqlitePool::connect(&db_url).await?;
 
     // Run Migrations
-    sqlx::migrate!("./migrations")
-        .run(&pool)
-        .await?;
+    sqlx::migrate!("./migrations").run(&pool).await?;
 
     // Update message 1
     update_message(1, "First Message", &pool).await?;
 
     // Fetch the messages from the database
-    
+
     // The hard way
     /*let messages = sqlx::query("SELECT id, message FROM messages")
-        .map(|row: sqlx::sqlite::SqliteRow| {
-            let id: i64 = row.get(0);
-            let message: String = row.get(1);
-            (id, message)
-        })
-        .fetch_all(&pool)
-        .await?;*/
+    .map(|row: sqlx::sqlite::SqliteRow| {
+        let id: i64 = row.get(0);
+        let message: String = row.get(1);
+        (id, message)
+    })
+    .fetch_all(&pool)
+    .await?;*/
 
     // The easy way
     let messages = sqlx::query_as::<_, Message>("SELECT id, message FROM messages")
@@ -60,12 +58,11 @@ async fn main() -> anyhow::Result<()> {
     // Or as a stream
     println!("--- stream ---");
     use futures::TryStreamExt;
-    let mut message_stream = sqlx::query_as::<_, Message>("SELECT id, message FROM messages")
-        .fetch(&pool);
+    let mut message_stream =
+        sqlx::query_as::<_, Message>("SELECT id, message FROM messages").fetch(&pool);
     while let Some(message) = message_stream.try_next().await? {
         println!("{message:?}");
     }
-
 
     Ok(())
 }

@@ -1,6 +1,6 @@
 //use std::sync::Mutex;
-use tokio::sync::Mutex;
 use once_cell::sync::Lazy;
+use tokio::sync::Mutex;
 
 //static COUNTER: Mutex<u32> = Mutex::new(0);
 static COUNTER: Lazy<Mutex<u32>> = Lazy::new(|| Mutex::new(0));

@@ -6,7 +6,7 @@ fn main() {
     let contents = std::fs::read_to_string(my_file);
     // Let's just handle the error by printing it out
     /*match contents {
-        Ok(contents) => println!("File contents: {contents}"),        
+        Ok(contents) => println!("File contents: {contents}"),
         Err(e) => println!("ERROR: {e:#?}"),
     }*/
 
@@ -43,7 +43,7 @@ fn main() {
             std::io::ErrorKind::UnexpectedEof => todo!(),
             std::io::ErrorKind::OutOfMemory => todo!(),
             std::io::ErrorKind::Other => todo!(),
-            _ => todo!(),            
+            _ => todo!(),
         },
     }
 }

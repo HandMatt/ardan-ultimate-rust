@@ -1,5 +1,5 @@
-use std::sync::RwLock;
 use once_cell::sync::Lazy;
+use std::sync::RwLock;
 
 static USERS: Lazy<RwLock<Vec<String>>> = Lazy::new(|| RwLock::new(build_users()));
 
@@ -17,13 +17,11 @@ pub fn read_line() -> String {
 }
 
 fn main() {
-    std::thread::spawn(|| {
-        loop {
-            println!("Current users (in a thread)");
-            let users = USERS.read().unwrap();
-            println!("{users:?}");
-            std::thread::sleep(std::time::Duration::from_secs(3));
-        }
+    std::thread::spawn(|| loop {
+        println!("Current users (in a thread)");
+        let users = USERS.read().unwrap();
+        println!("{users:?}");
+        std::thread::sleep(std::time::Duration::from_secs(3));
     });
 
     loop {

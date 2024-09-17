@@ -1,6 +1,6 @@
 use std::sync::Mutex;
 
-static MY_SHARED : Mutex<u32> = Mutex::new(0);
+static MY_SHARED: Mutex<u32> = Mutex::new(0);
 
 fn main() {
     /*

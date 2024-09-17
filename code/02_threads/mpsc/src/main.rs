@@ -1,7 +1,8 @@
 use std::sync::mpsc;
 
 enum Command {
-    SayHello, Quit
+    SayHello,
+    Quit,
 }
 
 fn main() {
@@ -19,7 +20,7 @@ fn main() {
         }
     });
 
-    for _ in 0 .. 10 {
+    for _ in 0..10 {
         tx.send(Command::SayHello).unwrap();
     }
     println!("Sending quit");

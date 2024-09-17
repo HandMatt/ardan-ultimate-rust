@@ -1,16 +1,16 @@
 use std::collections::HashMap;
 
-struct HashMapBucket<K,V>
-{
-    map: HashMap<K, Vec<V>>
+struct HashMapBucket<K, V> {
+    map: HashMap<K, Vec<V>>,
 }
 
-impl <K,V> HashMapBucket<K,V> 
-where K: Eq + std::hash::Hash
+impl<K, V> HashMapBucket<K, V>
+where
+    K: Eq + std::hash::Hash,
 {
     fn new() -> Self {
         HashMapBucket {
-            map: HashMap::new()
+            map: HashMap::new(),
         }
     }
 

@@ -20,10 +20,10 @@ fn main() {
     println!("{result:?}");
     let elapsed = now.elapsed();
     println!("Vector search took {} usecs", elapsed.as_micros());
-    
+
     let now = std::time::Instant::now();
     let result = my_hashmap.get(&element_to_find);
     println!("{result:?}");
     let elapsed = now.elapsed();
-    println!("HashMap search took {} usecs", elapsed.as_micros());   
+    println!("HashMap search took {} usecs", elapsed.as_micros());
 }

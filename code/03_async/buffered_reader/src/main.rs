@@ -4,7 +4,9 @@ use std::path::Path;
 
 // Taken from: https://doc.rust-lang.org/rust-by-example/std_misc/file/read_lines.html
 fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
-where P: AsRef<Path>, {
+where
+    P: AsRef<Path>,
+{
     let file = File::open(filename)?;
     Ok(io::BufReader::new(file).lines())
 }
@@ -22,14 +24,18 @@ async fn line_count(filename: String) -> anyhow::Result<usize> {
             }
         });
     }
-    println!("Read {} lines in {:.3} seconds", line_count, now.elapsed().as_secs_f32());
+    println!(
+        "Read {} lines in {:.3} seconds",
+        line_count,
+        now.elapsed().as_secs_f32()
+    );
     Ok(line_count)
 }
 
 async fn async_line_count(filename: String) -> anyhow::Result<usize> {
+    use tokio::fs::File;
     use tokio::io::AsyncBufReadExt;
     use tokio::io::BufReader;
-    use tokio::fs::File;
 
     println!("Reading {filename}...");
     let now = std::time::Instant::now();
@@ -44,7 +50,11 @@ async fn async_line_count(filename: String) -> anyhow::Result<usize> {
         }
     }
 
-    println!("Read {} lines in {:.3} seconds", line_count, now.elapsed().as_secs_f32());
+    println!(
+        "Read {} lines in {:.3} seconds",
+        line_count,
+        now.elapsed().as_secs_f32()
+    );
     Ok(line_count)
 }
 

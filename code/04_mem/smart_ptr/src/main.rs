@@ -1,12 +1,12 @@
-use std::alloc::{Layout, alloc, dealloc};
+use std::alloc::{alloc, dealloc, Layout};
 
 struct SmartPointer<T> {
     ptr: *mut u8,
     data: *mut T,
-    layout: Layout
+    layout: Layout,
 }
 
-impl <T> SmartPointer<T> {
+impl<T> SmartPointer<T> {
     fn new() -> SmartPointer<T> {
         println!("Allocating memory for SmartPointer");
 
@@ -17,7 +17,7 @@ impl <T> SmartPointer<T> {
             SmartPointer {
                 ptr,
                 data: ptr as *mut T,
-                layout
+                layout,
             }
         }
     }
@@ -29,13 +29,11 @@ impl <T> SmartPointer<T> {
     }
 
     fn get(&self) -> &T {
-        unsafe {
-            self.data.as_ref().unwrap()
-        }
+        unsafe { self.data.as_ref().unwrap() }
     }
 }
 
-impl <T> Drop for SmartPointer<T> {
+impl<T> Drop for SmartPointer<T> {
     fn drop(&mut self) {
         println!("Deallocating memory from SmartPointer");
         unsafe {

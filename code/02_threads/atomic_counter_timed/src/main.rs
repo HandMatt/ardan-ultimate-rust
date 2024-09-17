@@ -32,7 +32,10 @@ fn safely_atomic() {
         handles.push(handle);
     }
     handles.into_iter().for_each(|h| h.join().unwrap());
-    println!("Atomic: {}", ATOMIC_COUNTER.load(std::sync::atomic::Ordering::Relaxed));
+    println!(
+        "Atomic: {}",
+        ATOMIC_COUNTER.load(std::sync::atomic::Ordering::Relaxed)
+    );
 }
 
 fn main() {

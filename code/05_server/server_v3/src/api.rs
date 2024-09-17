@@ -1,6 +1,6 @@
-use axum::{Extension, Json, extract::Path};
-use sqlx::FromRow;
+use axum::{extract::Path, Extension, Json};
 use serde::Serialize;
+use sqlx::FromRow;
 
 use crate::commands::add_command;
 
@@ -36,18 +36,25 @@ pub async fn show_collectors(Extension(pool): Extension<sqlx::SqlitePool>) -> Js
     collector_id, 
     (SELECT MAX(received) FROM timeseries WHERE collector_id = ts.collector_id) AS last_seen 
     FROM timeseries ts";
-    Json(sqlx::query_as::<_, Collector>(SQL)
-        .fetch_all(&pool)
-        .await
-        .unwrap())
+    Json(
+        sqlx::query_as::<_, Collector>(SQL)
+            .fetch_all(&pool)
+            .await
+            .unwrap(),
+    )
 }
 
-pub async fn collector_data(Extension(pool): Extension<sqlx::SqlitePool>, uuid: Path<String>) -> Json<Vec<DataPoint>> {
-    let rows = sqlx::query_as::<_, DataPoint>("SELECT * FROM timeseries WHERE collector_id = ? ORDER BY received")
-        .bind(uuid.as_str())
-        .fetch_all(&pool)
-        .await
-        .unwrap();
+pub async fn collector_data(
+    Extension(pool): Extension<sqlx::SqlitePool>,
+    uuid: Path<String>,
+) -> Json<Vec<DataPoint>> {
+    let rows = sqlx::query_as::<_, DataPoint>(
+        "SELECT * FROM timeseries WHERE collector_id = ? ORDER BY received",
+    )
+    .bind(uuid.as_str())
+    .fetch_all(&pool)
+    .await
+    .unwrap();
 
     Json(rows)
 }

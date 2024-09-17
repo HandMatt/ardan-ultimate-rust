@@ -29,10 +29,7 @@ fn main() {
     loop {
         println!("Enter a string");
         let input = read_line();
-        let data_to_move = MyData {
-            data: input,
-            n,
-        };
+        let data_to_move = MyData { data: input, n };
         n += 1;
 
         tx.send(data_to_move).unwrap();

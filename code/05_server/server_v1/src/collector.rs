@@ -1,6 +1,9 @@
+use shared_v1::{decode_v1, DATA_COLLECTOR_ADDRESS};
 use std::net::SocketAddr;
-use shared_v1::{DATA_COLLECTOR_ADDRESS, decode_v1};
-use tokio::{net::{TcpListener, TcpStream}, io::AsyncReadExt};
+use tokio::{
+    io::AsyncReadExt,
+    net::{TcpListener, TcpStream},
+};
 
 pub async fn data_collector() -> anyhow::Result<()> {
     // Listen for TCP connections on the data collector address
