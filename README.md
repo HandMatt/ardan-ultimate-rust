@@ -1,4 +1,4 @@
-# Ultimate Rust Foundations
+# Ultimate Rust Bundle
 
 ![](/images/ardanlabs-logo.png)
 
@@ -118,3 +118,40 @@ This is presented as 5x 1-day classes, which may be taken together or individual
 * 5.10 - [Sending Commands](/05-Server/SendingCommands.md)
 * 5.11 - [Prevent Unbounded Growth](/05-Server/CollectionDaemon4.md)
 * 5.12 - [Giving the Collector a Diet](/05-Server/SmallerCollector.md)
+
+### [Rust Best Practice](/06-BestPractice/README.md)
+
+> Code examples to support this readme can be found [here](/code/06_best/)
+ 
+#### Tooling
+* 6.00 - [Formatting](/06-BestPractice/FormattingCode.md)
+* 6.01 - [Clippy (the linter)](/06-BestPractice/Clippy.md)
+* 6.02 - [Documenting Your Code](/06-BestPractice/Documentation.md)
+* 6.03 - [Understanding Dependencies](/06-BestPractice/Dependencies.md)
+* 6.04 - [Manage Your Own Dependencies](/06-BestPractice/ManageDependencies.md)
+* 6.05 - [Checking for Vulnerabilities](/06-BestPractice/Audit.md)
+* 6.06 - [Check for Outdated Dependencies](/06-BestPractice/Outdated.md)
+* 6.07 - [Denying Dependencies by Licencing](/06-BestPractice/Deny.md)
+
+#### Code Best Practices
+* 6.08 - [Favour Iterators](/06-BestPractice/Iterators.md)
+* 6.09 - [Minimize Cloning](/06-BestPractice/Clone.md)
+* 6.10 - [Don't Emulate OOP](/06-BestPractice/OOPs.md)
+* 6.11 - [Favour Small Functions](/06-BestPractice/SmallFunctions.md)
+* 6.12 - [Clever Code](/06-BestPractice/Cleverness.md)
+* 6.13 - [Floating Point Numbers](/06-BestPractice/Floats.md)
+* 6.14 - [Platform & Feature Specific Code](/06-BestPractice/PlatformSpecific.md)
+
+#### General Best Practices
+* 6.15 - [TANSTAAFL](/06-BestPractice/TANSTAAFL.md)
+* 6.16 - [YAGNI](/06-BestPractice/YAGNI.md)
+* 6.17 - [Domain Boundaries](/06-BestPractice/DomainBoundaries.md)
+* 6.18 - [Taming Compile Times](/06-BestPractice/CompileTimes.md)
+
+---
+
+> Original materials found on Herbert's Github: 
+> * [Ultimate Rust - Foundations](https://github.com/thebracket/ArdanUltimateRustFoundations)
+> * [Ultimate Rust - 5 Days](https://github.com/thebracket/ArdanUltimateRust-5Days)
+> * [Ultimate Rust - Best Practices](https://github.com/thebracket/Ardan-NR-2023-07)
+> * [Rust as a Service](https://github.com/thebracket/ArdanRustService)
