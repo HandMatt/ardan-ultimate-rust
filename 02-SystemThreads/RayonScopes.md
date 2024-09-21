@@ -51,7 +51,7 @@ fn main() {
                     .num_threads(4)
                     .build()
                     .unwrap();
-                
+
                 pool.scope(|scope| {
                     for inner_n in 0.. 4 {
                         scope.spawn(move |_scope| {
@@ -59,7 +59,7 @@ fn main() {
                         });
                     }
                 });
-                
+
                 println!("Goodbye from top-level {n}");
             });
         }
@@ -115,3 +115,5 @@ fn main() {
     pool.join(test, test);
 }
 ```
+
+> [Next](/02-SystemThreads/HandlingFiles.md)

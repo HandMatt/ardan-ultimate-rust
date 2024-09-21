@@ -2,17 +2,17 @@
 
 There are three major categories of file-handling inside a server service:
 
-* Processing the file, as fast as possible.
-* Sending the file somewhere else---streaming it to maximize I/O efficiency.
-* Sending the file somewhere else---and doing something with it on the way through.
+- Processing the file, as fast as possible.
+- Sending the file somewhere else---streaming it to maximize I/O efficiency.
+- Sending the file somewhere else---and doing something with it on the way through.
 
 These tasks can be orthogonal, and are often best handled in chunks. Sometimes, you need to combine the two.
 
 ## Regular File I/O
 
-> The code for this is in `code/06_bonus/read_file`
+> The code for this is in `code/02_threads/read_file`
 
-Let's start by making sure we're comfortable with regular file input/output (non-async). Let's count the lines in *War and Peace*. An inefficient but fast way to do this is to read the entire file into memory and process it:
+Let's start by making sure we're comfortable with regular file input/output (non-async). Let's count the lines in _War and Peace_. An inefficient but fast way to do this is to read the entire file into memory and process it:
 
 ```rust
 use std::fs::read_to_string;
@@ -63,15 +63,15 @@ fn main() {
 }
 ```
 
-This provides a small improvement for *War and Peace* (1-2 ms). For really big files, the improvement can be *huge*. For a randomly generated 10,000,000 line file (1 gb) the timings come in as follows:
+This provides a small improvement for _War and Peace_ (1-2 ms). For really big files, the improvement can be _huge_. For a randomly generated 10,000,000 line file (1 gb) the timings come in as follows:
 
-| Method | Time |
-| --- | --- |
+| Method         | Time     |
+| -------------- | -------- |
 | Read to String | 2,311 ms |
-| BufReader | 853 ms |
-| MMap | 778 ms |
+| BufReader      | 853 ms   |
+| MMap           | 778 ms   |
 
-You can generate a file on *NIX with:
+You can generate a file on \*NIX with:
 
 ```
 tr -dc "A-Za-z 0-9" < /dev/urandom | fold -w100|head -n 1000000 > bigfile.txt
@@ -89,7 +89,7 @@ Streaming files is a great way to maximize I/O efficiency. It's also a great way
 
 If you're working with one of the built-in response types provided by Axum.
 
-> The code for this is in `code/06_bonus/file_adapt`
+> The code for this is in `code/02_threads/file_adapt`
 
 You need to set a header to indicate how browsers (or other clients) should handle the file, and then use `tokio_util`'s `io::ReaderStream` to stream the file to the client.
 
@@ -140,7 +140,7 @@ async fn handler() -> impl IntoResponse {
 }
 ```
 
-This allows you to stream files from disk to the client, without loading the entire file into memory. It maximizes *throughput*, not latency. The task will be yielding frequently, allowing other tasks to run. This has the advantage of making the best use of your I/O resources (disk and network bandwidth).
+This allows you to stream files from disk to the client, without loading the entire file into memory. It maximizes _throughput_, not latency. The task will be yielding frequently, allowing other tasks to run. This has the advantage of making the best use of your I/O resources (disk and network bandwidth).
 
 ### Modifying Files as They Stream
 
@@ -195,12 +195,12 @@ async fn handler() -> impl IntoResponse {
 
 Instead of just loading the file as a stream, and passing it along - we are building a chain of adapters. Tokio and the `tokio_util` and `tokio_stream` crates provide some very helpful adapters to work with. Let's break down what we're doing:
 
-* We open file file, using Tokio's file handling (async) routines (`tokio::fs::File`).
-* We create `BufReader` - but it's a `tokio::io::BufReader` not the standard one.
-* We use `tokio_stream`'s `LinesStream` adapter to turn the `.lines()` function into a stream.
-* We pass the stream into a new adapter we're going to create called `ToUpper` - which takes a stream of strings, and emits a stream of upper case strings.
+- We open file file, using Tokio's file handling (async) routines (`tokio::fs::File`).
+- We create `BufReader` - but it's a `tokio::io::BufReader` not the standard one.
+- We use `tokio_stream`'s `LinesStream` adapter to turn the `.lines()` function into a stream.
+- We pass the stream into a new adapter we're going to create called `ToUpper` - which takes a stream of strings, and emits a stream of upper case strings.
 
-Now we run headlong into one of Rust's memory management issues. When you want to stream data between asynchronous objects in memory, you need to ensure that Rust won't relocate any of the data. This is called *pinning*. The `pin-project-lite` crate provides the easiest way to do this; you can wrap your project in a macro, and it does the work for you. So let's create a `ToUpper` type, and use the macro to ensure that the underlying stream is *pinned* in memory---it won't move:
+Now we run headlong into one of Rust's memory management issues. When you want to stream data between asynchronous objects in memory, you need to ensure that Rust won't relocate any of the data. This is called _pinning_. The `pin-project-lite` crate provides the easiest way to do this; you can wrap your project in a macro, and it does the work for you. So let's create a `ToUpper` type, and use the macro to ensure that the underlying stream is _pinned_ in memory---it won't move:
 
 ```rust
 pin_project! {

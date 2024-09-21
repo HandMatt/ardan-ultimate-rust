@@ -67,6 +67,8 @@ members = [
     "02_threads/rayon_nested_pools",
     "02_threads/rayon_broadcast",
     "02_threads/rayon_join",
+    "02_threads/read_file",
+    "02_threads/file_adapt",
 
     # Week 3 - Async/Await
     "03_async/hello_async_futures",
@@ -140,9 +142,6 @@ members = [
     "05_server/collector_nouuid",
 
     # Week 6 - Best Practices
-    "06_best/read_file",
-    "06_best/file_adapt",
-    "06_best/best",
 
     # Week 7 - Rust as a Service
     "07_http_server",
