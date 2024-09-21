@@ -4,37 +4,37 @@
 
 This class will cover the ins and outs of integrating Rust into a Service-Oriented-Architecture. In this class, we'll go over:
 
-* Building a REST service
-    * Start with a minimal HTTP server.
-    * Add state, immutable and mutable.
-    * Add services with layers.
-    * Nest multiple routers together.
-    * Call other REST services.
-    * Error Handling.
-    * Utilizing Middleware.
-    * Using Headers.
-    * Additional Layer Services.
-* Tracing
-    * Logging
-    * Timing with Spans
-    * Timing Axum Requests from end-to-end
-    * Logging targets: stdout, files, JSON
-    * OpenTelemetry
-* Documenting your REST API with OpenAPI
-* Service Configuration
-    * Environment Variables
-    * Files
-    * HTTP sources
-    * The Command Line
-* gRPC
-    * Tonic - the gRPC server
-    * Streaming
-* Web Sockets
-    * Web Socket server
-    * Web Sockets and Serialization
-    * Web Socket Client
-* Service Deployment
-* Service Design
+- Building a REST service
+  - Start with a minimal HTTP server.
+  - Add state, immutable and mutable.
+  - Add services with layers.
+  - Nest multiple routers together.
+  - Call other REST services.
+  - Error Handling.
+  - Utilizing Middleware.
+  - Using Headers.
+  - Additional Layer Services.
+- Tracing
+  - Logging
+  - Timing with Spans
+  - Timing Axum Requests from end-to-end
+  - Logging targets: stdout, files, JSON
+  - OpenTelemetry
+- Documenting your REST API with OpenAPI
+- Service Configuration
+  - Environment Variables
+  - Files
+  - HTTP sources
+  - The Command Line
+- gRPC
+  - Tonic - the gRPC server
+  - Streaming
+- Web Sockets
+  - Web Socket server
+  - Web Sockets and Serialization
+  - Web Socket Client
+- Service Deployment
+- Service Design
 
 ## About Herbert Wolverson
 
@@ -49,6 +49,8 @@ Herbert has been developing software professionally for more than 20 years. Star
 
 I recommend bookmarking the following resources:
 
-* [The Rust Programming Language](https://doc.rust-lang.org/book/)
-* [Rust by Example](https://doc.rust-lang.org/rust-by-example/)
-* [Rust Standard Library Documentation](https://doc.rust-lang.org/std/)
+- [The Rust Programming Language](https://doc.rust-lang.org/book/)
+- [Rust by Example](https://doc.rust-lang.org/rust-by-example/)
+- [Rust Standard Library Documentation](https://doc.rust-lang.org/std/)
+
+> [Next](/07-RustService/rest_service.md)
