@@ -53,3 +53,5 @@ Let's look at what changed:
 - We use `format` to include the contents of the state object.
 
 So what have we achieved? We've got a global variable, shared between everything in our `Router`---but without the messiness of a global variable. The global remains protected by Rust's borrow checker---race conditions won't compile.
+
+> [Next](/07-RustService/simple_tower_layer_mut.md)
