@@ -144,7 +144,25 @@ members = [
     # Week 6 - Best Practices
 
     # Week 7 - Rust as a Service
-    "07_http_server",
+    "07_rest_service/simple_http_server",
+    "07_rest_service/axum_extract_path",
+    "07_rest_service/axum_extract_query",
+    "07_rest_service/axum_extract_headers",
+    "07_rest_service/simple_tower_server",
+    "07_rest_service/simple_tower_server_mut",
+    "07_rest_service/simple_tower_server_multi_state",
+    "07_rest_service/simple_nested",
+    "07_rest_service/simple_nested_state",
+    "07_rest_service/hyper_client",
+    "07_rest_service/status_codes",
+    "07_rest_service/axum_error_handling",
+    "07_rest_service/static_content",
+    "07_rest_service/axum_headers",
+    "07_rest_service/axum_header_layer",
+    "07_rest_service/axum_header_layer_inject",
+    "07_rest_service/axum_merge",
+    "07_rest_service/axum_compression",
+    "07_rest_service/axum_service_builder",
 ]
 
 # Enable this only for the optimization/diet guide
