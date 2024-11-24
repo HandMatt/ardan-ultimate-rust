@@ -128,7 +128,7 @@ members = [
     "04_mem/c_rust",
     "04_mem/rust_c",
 
-    # Week 5 - Build a Server
+    # Week 5 - Build a Server & Best Practices
     "05_server/shared_v1",
     "05_server/collector_v1",
     "05_server/server_v1",
@@ -140,10 +140,9 @@ members = [
     "05_server/server_v3",
     "05_server/collector_v4",
     "05_server/collector_nouuid",
+    # Best Practices
 
-    # Week 6 - Best Practices
-
-    # Week 7 - Rust as a Service
+    # Week 6 - Rust as a Service
     "07_rest_service/simple_http_server",
     "07_rest_service/axum_extract_path",
     "07_rest_service/axum_extract_query",
@@ -163,6 +162,17 @@ members = [
     "07_rest_service/axum_merge",
     "07_rest_service/axum_compression",
     "07_rest_service/axum_service_builder",
+    
+    # Week 7 - Tracing & OpenAPI
+    "08_tracing/axum_tracing_minimal",
+    "08_tracing/axum_tracing_tower",
+    "08_tracing/axum_spans_own",
+    "08_tracing/axum_spans", 
+    "08_tracing/trace_to_file", 
+    "08_tracing/trace_to_json", 
+    "08_tracing/otel_minimal", 
+    # OpenAPI
+    "09_openapi/axum_openapi",
 ]
 
 # Enable this only for the optimization/diet guide
