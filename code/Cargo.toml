@@ -178,7 +178,18 @@ members = [
     "10_config/config_clap", 
     "10_config/config_http", 
     "10_config/config_minimal", 
-    "10_config/envfile", "11_grpc/hello_tonic", "11_grpc/tonic_auth", "11_grpc/tonic_stream", "11_grpc/tonic_tracing",
+    "10_config/envfile", 
+    
+    # Week 9 - gRPCrpc
+    "11_grpc/hello_tonic", 
+    "11_grpc/tonic_auth", 
+    "11_grpc/tonic_stream", 
+    "11_grpc/tonic_tracing", 
+    
+    # Week 10 - Web Sockets
+    "12_websockets/ws_client", 
+    "12_websockets/ws_json", 
+    "12_websockets/ws_echo",
 ]
 
 # Enable this only for the optimization/diet guide

@@ -210,7 +210,7 @@ This is presented as 5x 1-day classes, which may be taken together or individual
 
 ### [gRPC](11-gRPC/README.md)
 
-> Code samples to support this readme can be found [here](code/11_gprc)
+> Code samples to support this readme can be found [here](code/11_grpc)
 
 - 11.00 - [Hello Tonic - Protocol Definition](11-gRPC/grpc_hello.md)
 - 11.01 - [Hello Tonic - Project Definition and Build](11-gRPC/grpc_hello2.md)
@@ -224,6 +224,14 @@ This is presented as 5x 1-day classes, which may be taken together or individual
 - 11.09 - [Authentication](11-gRPC/grpc_auth.md)
 - 11.10 - [Tracing](11-gRPC/grpc_tracing.md)
 - 11.11 - [When to use gRPC](11-gRPC/grpc_conclude.md)
+
+### [Web Sockets](12-WebSockets/README.md)
+
+> Code samples to support this readme can be found [here](code/12_websockets)
+
+- 12.00 - [Minimal Echo Server](12-WebSockets/ws_echo_server.md)
+- 12.01 - [A native WS client](12-WebSockets/ws_client.md)
+- 12.02 - [JSON](12-WebSockets/ws_json.md)
 
 ---
 
