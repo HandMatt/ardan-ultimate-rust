@@ -172,7 +172,13 @@ members = [
     "08_tracing/trace_to_json", 
     "08_tracing/otel_minimal", 
     # OpenAPI
-    "09_openapi/axum_openapi",
+    "09_openapi/axum_openapi", 
+    
+    # Week 8 - Handling Service Configuration
+    "10_config/config_clap", 
+    "10_config/config_http", 
+    "10_config/config_minimal", 
+    "10_config/envfile",
 ]
 
 # Enable this only for the optimization/diet guide
