@@ -208,6 +208,23 @@ This is presented as 5x 1-day classes, which may be taken together or individual
 - 10.03 - [CLI configuration with Clap](10-HandlingServiceConfiguration/config_clap.md)
 - 10.04 - [Recap](10-HandlingServiceConfiguration/config_recap1.md)
 
+### [gRPC](11-gRPC/README.md)
+
+> Code samples to support this readme can be found [here](code/11_gprc)
+
+- 11.00 - [Hello Tonic - Protocol Definition](11-gRPC/grpc_hello.md)
+- 11.01 - [Hello Tonic - Project Definition and Build](11-gRPC/grpc_hello2.md)
+- 11.02 - [Hello Tonic - The Server](11-gRPC/grpc_hello3.md)
+- 11.03 - [Hello Tonic - The Client](11-gRPC/grpc_hello4.md)
+- 11.04 - [gRPC Streaming](11-gRPC/grpc_stream.md)
+- 11.05 - [gRPC Streaming - Protocol Definition](11-gRPC/grpc_stream2.md)
+- 11.06 - [gRPC Streaming - The Server](11-gRPC/grpc_stream3.md)
+- 11.07 - [gRPC Streaming - The Client](11-gRPC/grpc_stream4.md)
+- 11.08 - [Recap So Far](11-gRPC/grpc_recap1.md)
+- 11.09 - [Authentication](11-gRPC/grpc_auth.md)
+- 11.10 - [Tracing](11-gRPC/grpc_tracing.md)
+- 11.11 - [When to use gRPC](11-gRPC/grpc_conclude.md)
+
 ---
 
 > Original materials found on Herbert's Github:
