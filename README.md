@@ -119,6 +119,8 @@ This is presented as 5x 1-day classes, which may be taken together or individual
 - 05.11 - [Prevent Unbounded Growth](05-Server/CollectionDaemon4.md)
 - 05.12 - [Giving the Collector a Diet](05-Server/SmallerCollector.md)
 
+---
+
 ### [Rust Best Practice](06-BestPractice/README.md)
 
 #### Tooling
@@ -148,6 +150,8 @@ This is presented as 5x 1-day classes, which may be taken together or individual
 - 06.16 - [YAGNI](06-BestPractice/YAGNI.md)
 - 06.17 - [Domain Boundaries](06-BestPractice/DomainBoundaries.md)
 - 06.18 - [Taming Compile Times](06-BestPractice/CompileTimes.md)
+
+---
 
 ### [Building a REST Service](07-RESTService/README.md)
 
@@ -232,6 +236,27 @@ This is presented as 5x 1-day classes, which may be taken together or individual
 - 12.00 - [Minimal Echo Server](12-WebSockets/ws_echo_server.md)
 - 12.01 - [A native WS client](12-WebSockets/ws_client.md)
 - 12.02 - [JSON](12-WebSockets/ws_json.md)
+
+### [Service Deployment](13-ServiceDeployment/README.md)
+
+- 13.00 - [Test Service](13-ServiceDeployment/svc_deploy_test.md)
+- 13.01 - [Native Host Deployment](13-ServiceDeployment/svc_deploy_native.md)
+- 13.02 - [Docker Deployment](13-ServiceDeployment/svc_deploy_docker.md)
+
+### [Service Design](14-ServiceDesign/README.md)
+
+- 14.00 - [Understanding Your Company Architecture](14-ServiceDesign/design_company_arch.md)
+- 14.01 - [Designing Individual Services](14-ServiceDesign/design_svc_intro.md)
+  - 14.02 - [Layout](14-ServiceDesign/design_svc_layout.md)
+  - 14.03 - [Per-Service Configuration](14-ServiceDesign/design_svc_config.md)
+  - 14.04 - [Per-Service Database](14-ServiceDesign/design_svc_db.md)
+  - 14.05 - [Layers and API Systems for Other Systems](14-ServiceDesign/design_svc_layer.md)
+  - 14.06 - [Finally, the service module itself](14-ServiceDesign/design_svc_module.md)
+- 14.07 - [Combining Services into a Modular Monolith](14-ServiceDesign/design_svc_modular_monolith.md)
+- 14.08 - [Service Exposure](14-ServiceDesign/design_svc_exposure.md)
+- 14.09 - [Scaling Out](14-ServiceDesign/design_svc_scaling_out.md)
+
+- [Rust as a Service - Wrap Up](./wrap.md)
 
 ---
 

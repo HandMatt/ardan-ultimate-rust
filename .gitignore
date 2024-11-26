@@ -1,1 +1,8 @@
 code/target
+service/target
+/target
+manual/book
+signoz
+no_workspace/13_deploy_bookstore/auth.db*
+no_workspace/13_deploy_bookstore/bookstore.db*
+no_workspace/13_deploy_bookstore/target
