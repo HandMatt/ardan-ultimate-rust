@@ -256,8 +256,6 @@ This is presented as 5x 1-day classes, which may be taken together or individual
 - 14.08 - [Service Exposure](14-ServiceDesign/design_svc_exposure.md)
 - 14.09 - [Scaling Out](14-ServiceDesign/design_svc_scaling_out.md)
 
-- [Rust as a Service - Wrap Up](./wrap.md)
-
 ---
 
 > Original materials found on Herbert's Github:
